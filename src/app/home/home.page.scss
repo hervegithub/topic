@@ -1,0 +1,25 @@
+ion-searchbar input.searchbar-input {
+  background-color: #383a3e;
+}
+
+.fileSize{
+  margin-top: -15px;
+  font-size: 13px;
+  color: gray;
+}
+
+.fileIcon{
+  font-size: 3em;
+}
+
+ion-item{
+  border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+ion-searchbar{
+  --background : #3e4653;
+  --box-shadow : none;
+  --color: white;
+  --icon-color:white;
+  border-radius: 10px;
+}

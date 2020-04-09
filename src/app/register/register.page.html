@@ -1,0 +1,18 @@
+<ion-content color="dark" class="ion-padding">
+
+  <div id="recaptcha-container"></div>
+  
+  <div class="ion-text-center ion-margin-vertical">
+    <ion-img src="../../assets/logo.png"></ion-img>
+    <p style="margin-top: 30px; margin-bottom: 20px;">Après votre inscription, envoyer nous le numero de confirmation que vous avez reçu via sms.</p>
+  </div>
+  <ion-item class="ion-padding" class="input-div" style="margin-top: 30px;">
+    <ion-icon name="phone-portrait-outline" slot="start" color="light"></ion-icon>
+    <ion-input type="text" 
+    placeholder="saisissez votre numéro de télèphone" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+  <ion-item class="text-right" color="dark">
+    <a color="warning" (click)="onLoginPage()">Vous avez un compte ? connectez-vous</a>
+  </ion-item>
+  <ion-button color="warning" (click)="onVerifyPage()">S'incrire</ion-button>
+</ion-content>

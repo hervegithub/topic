@@ -1,0 +1,15 @@
+<ion-content color="dark" class="ion-padding">
+  <div class="ion-text-center ion-margin-vertical">
+    <ion-img src="../../assets/logo.png"></ion-img>
+    <p style="margin-top: 30px; margin-bottom: 20px;">Après votre inscription, envoyer nous le numero de confirmation que vous avez reçu via sms.</p>
+  </div>
+  <ion-item class="ion-padding" class="input-div" style="margin-top: 30px;">
+    <ion-icon name="phone-portrait-outline" slot="start" color="light"></ion-icon>
+    <ion-input type="text" 
+    placeholder="saisissez le code de vérification" [(ngModel)]="codeVerification"></ion-input>
+  </ion-item>
+  <ion-item class="ion-text-center" color="dark">
+    <a color="warning">je n'ai pas reçu le code</a>
+  </ion-item>
+  <ion-button color="warning" (click)="verifyNumberWithCode()">Vérifier</ion-button>
+</ion-content>

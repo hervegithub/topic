@@ -1,0 +1,18 @@
+ion-input{
+      --color:white;
+      --background: #3e4653;
+      font-size: small;
+}
+
+.input-div{
+      --background: #3e4653;
+      border-radius: 10px;
+      height: 50px;
+      --highlight-color-focused:#e0bb2e;
+}
+
+ion-button{
+      height: 50px;
+      width: 100%;
+      margin-top: 10px;
+}

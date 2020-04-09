@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      MY FILE
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ellipsis-vertical-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-searchbar></ion-searchbar>
+    <ion-segment class="no-padding" [(ngModel)]="segment">
+      <ion-segment-button value="liste">
+        <ion-label>FILE LIST</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="like">
+        <ion-label>Suivie</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="'liste'">
+      <ion-list lines="none" class="no-padding">
+        <ion-item *ngFor="let file of files" class="no-padding" (click)="onSingleFilePage(file.id)">
+          <ion-icon slot="start" size="16" src="../../assets/pdf.svg"
+          class="fileIcon"></ion-icon>
+          <div>
+            <p>{{file.fileName}}</p>
+            <p class="fileSize">120ko</p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngSwitchCase="'like'">
+
+    </div>
+  </div>
+</ion-content>
