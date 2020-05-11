@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.vyconsulting.app",
   "appName": "topic",
   "bundledWebRuntime": false,
   "npmClient": "npm",

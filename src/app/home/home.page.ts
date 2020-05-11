@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FileService } from '../share/files/file.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { PopoverController } from '@ionic/angular';
+import { PopoverPage } from '../popover/popover.page';
 
 interface file {
   id:number;
@@ -29,7 +31,7 @@ export class HomePage {
   }
 
   constructor(private filesSrv : FileService, private router: Router,
-    private route : ActivatedRoute) {
+    private route : ActivatedRoute, private popoverCtrl: PopoverController) {
     //this.files =  this.filesSrv.getFiles('BEPC');
     this.segment ="liste"
   }
@@ -61,11 +63,16 @@ export class HomePage {
   }
 
   getAllFile(){
-    this.filesSrv.getAllFileOnFirebase().then((data:file)=>{
-      this.files.push(data);
-    }).catch((err)=>{
-      console.error(err);
+   this.files= this.filesSrv.getAllFileOnFirebase();
+  }
+
+  async presentPopover(ev: any) {
+    const popover = await this.popoverCtrl.create({
+      component:PopoverPage,
+      event: ev,
+      translucent: true
     });
+    return await popover.present();
   }
 
 }

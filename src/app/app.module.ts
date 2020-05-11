@@ -10,12 +10,14 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {PopoverPageModule} from "./popover/popover.module"
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule,
+    PopoverPageModule,
      IonicModule.forRoot(),
       AppRoutingModule],
   providers: [

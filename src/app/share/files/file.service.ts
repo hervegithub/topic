@@ -72,13 +72,6 @@ export class FileService {
   }
 
   getAllFileOnFirebase(){
-    let promise = new Promise((resolve, reject)=>{
-      this.rootRef.once('value').then(snapshot =>{
-        resolve(snapshot.val());
-      }).catch((err)=>{
-        reject(err);
-      });
-    });
-    return promise;
+    return this.files;
   }
 }

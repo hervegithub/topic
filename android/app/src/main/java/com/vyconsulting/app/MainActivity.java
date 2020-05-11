@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.vyconsulting.app;
 
 import android.os.Bundle;
 

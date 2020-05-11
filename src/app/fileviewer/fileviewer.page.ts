@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FileService } from '../share/files/file.service';
 import { FileMimeType } from '@taldor-ltd/angular-file-viewer';
 import { PopoverController } from '@ionic/angular';
-import { PopoverComponent } from '../popover/popover.component';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { PopoverPage } from '../popover/popover.page';
 
 
 interface file {
@@ -55,7 +55,7 @@ export class FileviewerPage implements OnInit {
 
   async presentPopover(ev: any) {
     const popover = await this.popoverControler.create({
-      component: PopoverComponent,
+      component: PopoverPage,
       event: ev,
       translucent: true
     });
